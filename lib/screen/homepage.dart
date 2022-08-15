@@ -287,17 +287,17 @@ class _HomePageState extends State<HomePage> {
                       ),
 
                       Container(
-                        padding: EdgeInsets.symmetric(horizontal: 30),
+                        padding: EdgeInsets.symmetric(horizontal: 30,vertical: 10),
                         color: Colors.white,
-                        height: 350,
+                        height: 130,
                         child: ListView.separated(
                           shrinkWrap: true,
                           itemCount: newsList.length,
-                          scrollDirection: Axis.vertical,
+                          scrollDirection: Axis.horizontal,
                           itemBuilder: (context, index) {
                             return Container(
-                              height: 120,
-                              // color: Colors.blueAccent,
+                              width: MediaQuery.of(context).size.width*0.9,
+                              //color: Colors.black12,
                               child: Row(
                                 children: [
                                   Expanded(
@@ -360,7 +360,7 @@ class _HomePageState extends State<HomePage> {
                             );
                           },
                           separatorBuilder: (context, index) {
-                            return SizedBox(height: 10,);
+                            return SizedBox(width: 20,);
                           },
                         ),
                       ),
