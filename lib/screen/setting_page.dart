@@ -7,10 +7,8 @@ class SettingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Column(
-          children: [
-            Text('Setting')
-          ],
+        child: Center(
+          child: Text('Setting'),
         ),
       ),
     );

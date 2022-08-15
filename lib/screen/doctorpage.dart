@@ -7,10 +7,8 @@ class DoctorPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Column(
-          children: [
-            Text('Doctor Page')
-          ],
+        child: Center(
+          child: Text('Doctor Page'),
         ),
       ),
     );

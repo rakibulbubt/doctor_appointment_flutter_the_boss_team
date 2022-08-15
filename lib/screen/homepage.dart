@@ -286,6 +286,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
 
+                      //DAILY UPDATE SCROLL LISTVIEW
                       Container(
                         padding: EdgeInsets.symmetric(horizontal: 30,vertical: 10),
                         color: Colors.white,
@@ -298,8 +299,12 @@ class _HomePageState extends State<HomePage> {
                             return Container(
                               width: MediaQuery.of(context).size.width*0.9,
                               //color: Colors.black12,
+
+                              //UPDATED NEWS TITLE AND IMAGE
                               child: Row(
                                 children: [
+
+                                  //UPDATED NEWS TITLE
                                   Expanded(
                                     flex: 6,
                                     child: Container(
@@ -339,6 +344,8 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                   ),
+
+                                  //UPDATED NEWS IMAGGGES
                                   Expanded(
                                     flex: 5,
                                     child: Container(
@@ -370,6 +377,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             //SERVICE AND SEE ALL ROW AND LISTVIEW END HERE
+
           ],
         ),
       ),

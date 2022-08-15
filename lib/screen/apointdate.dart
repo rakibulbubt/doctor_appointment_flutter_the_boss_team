@@ -7,10 +7,8 @@ class AppointmentDate extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Column(
-          children: [
-            Text('Appoint Date')
-          ],
+        child: Center(
+          child: Text('Appoint Date'),
         ),
       ),
     );
