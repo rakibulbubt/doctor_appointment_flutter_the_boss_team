@@ -92,10 +92,11 @@ class _WeeklyDatePickerrState extends State<WeeklyDatePickerr> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 70,
+      height: 150,
       width: double.infinity,
       color: widget.backgroundColor,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           widget.enableWeeknumberText
               ? Container(
@@ -163,7 +164,7 @@ class _WeeklyDatePickerrState extends State<WeeklyDatePickerr> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 15,),
               Container(
                 padding: EdgeInsets.all(1),
                 decoration: BoxDecoration(
@@ -188,6 +189,29 @@ class _WeeklyDatePickerrState extends State<WeeklyDatePickerr> {
                   ),
                 ),
               ),
+              SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 6.5,
+                    width: 6.5,
+                    decoration: BoxDecoration(
+                      color: widget.weekdayTextColor,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  ),
+                  SizedBox(width: 10,),
+                  Container(
+                    height: 6.5,
+                    width: 6.5,
+                    decoration: BoxDecoration(
+                      color: widget.weekdayTextColor,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ),
