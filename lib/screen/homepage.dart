@@ -132,7 +132,6 @@ class _HomePageState extends State<HomePage> {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-
                       //SERVICE BUTTON AND SEE ALL BUTTON AND ICOND LISTVIEW CONTAINER
                       Container(
                         margin: EdgeInsets.symmetric(vertical: 15),
@@ -231,7 +230,8 @@ class _HomePageState extends State<HomePage> {
 
                       //DAILY UPDATE AND TOW DOT OPTION
                       Container(
-                        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                         width: double.infinity,
                         color: Colors.white,
                         child: Row(
@@ -288,7 +288,8 @@ class _HomePageState extends State<HomePage> {
 
                       //DAILY UPDATE SCROLL LISTVIEW
                       Container(
-                        padding: EdgeInsets.symmetric(horizontal: 30,vertical: 10),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                         color: Colors.white,
                         height: 130,
                         child: ListView.separated(
@@ -297,21 +298,22 @@ class _HomePageState extends State<HomePage> {
                           scrollDirection: Axis.horizontal,
                           itemBuilder: (context, index) {
                             return Container(
-                              width: MediaQuery.of(context).size.width*0.9,
+                              width: MediaQuery.of(context).size.width * 0.9,
                               //color: Colors.black12,
 
                               //UPDATED NEWS TITLE AND IMAGE
                               child: Row(
                                 children: [
-
                                   //UPDATED NEWS TITLE
                                   Expanded(
                                     flex: 6,
                                     child: Container(
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
-                                          Text(newsList[index].title,
+                                          Text(
+                                            newsList[index].title,
                                             style: TextStyle(
                                               color: Color(0xFF4D577C),
                                               fontWeight: FontWeight.w900,
@@ -320,19 +322,25 @@ class _HomePageState extends State<HomePage> {
                                               fontSize: 15,
                                             ),
                                           ),
-                                          SizedBox(height: 10,),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
                                           Row(
                                             children: [
-                                              Text(newsList[index].date,
-                                                style:TextStyle(
-                                                    fontSize: 15,
-                                                    fontWeight: FontWeight.w500,
-                                                    color: Color(0xFF919BB5),
+                                              Text(
+                                                newsList[index].date,
+                                                style: TextStyle(
+                                                  fontSize: 15,
+                                                  fontWeight: FontWeight.w500,
+                                                  color: Color(0xFF919BB5),
+                                                ),
                                               ),
+                                              SizedBox(
+                                                width: 10,
                                               ),
-                                              SizedBox(width: 10,),
-                                              Text(newsList[index].time,
-                                                style:TextStyle(
+                                              Text(
+                                                newsList[index].time,
+                                                style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight: FontWeight.w500,
                                                   color: Color(0xFF919BB5),
@@ -367,7 +375,9 @@ class _HomePageState extends State<HomePage> {
                             );
                           },
                           separatorBuilder: (context, index) {
-                            return SizedBox(width: 20,);
+                            return SizedBox(
+                              width: 20,
+                            );
                           },
                         ),
                       ),
@@ -377,7 +387,6 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             //SERVICE AND SEE ALL ROW AND LISTVIEW END HERE
-
           ],
         ),
       ),
