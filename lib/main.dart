@@ -19,12 +19,11 @@ class MyApp extends StatelessWidget {
       statusBarIconBrightness: Brightness.light,
     ));
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: CustomNavbar()
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: CustomNavbar());
   }
 }

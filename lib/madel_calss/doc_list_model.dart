@@ -11,7 +11,7 @@ class nearby {
       nearby(
           img:
               "https://t4.ftcdn.net/jpg/03/20/52/31/240_F_320523164_tx7Rdd7I2XDTvvKfz2oRuRpKOPE5z0ni.jpg",
-          name: "Darrell Steward"),
+          name: "Wade Warren"),
       nearby(
           img:
               "https://t3.ftcdn.net/jpg/01/30/45/54/240_F_130455409_fTuinPO1LXECv5hlk9VBREnL6yowYUo3.jpg",
