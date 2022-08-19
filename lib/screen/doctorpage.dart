@@ -1,19 +1,25 @@
 import 'package:doctor_appointment/custom_nav_bar/custom_navbar.dart';
+import 'package:doctor_appointment/screen/apointdate.dart';
 import 'package:doctor_appointment/screen/homepage.dart';
 import 'package:flutter/material.dart';
+import 'package:doctor_appointment/madel_calss/doc_list_model.dart';
 
 class DoctorPage extends StatelessWidget {
-  const DoctorPage({Key? key}) : super(key: key);
+  DoctorPage({Key? key}) : super(key: key);
+
+  final List docList = nearby.getnearby();
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: Container(
+          color: Colors.grey.withOpacity(0.2),
           child: Column(
             children: [
               //Doctors Start
               Container(
+                margin: EdgeInsets.only(bottom: 10),
                 padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
                 decoration: BoxDecoration(
                   color: Color(0xFF07919D),
@@ -105,6 +111,161 @@ class DoctorPage extends StatelessWidget {
                   ],
 
                   //Search Bar end
+                ),
+              ),
+              SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Container(
+                      color: Colors.white,
+                      padding:
+                          EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "DOCTOR NEARBY",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              InkWell(
+                                onTap: () {},
+                                child: Text(
+                                  "SEE ALL",
+                                  style: TextStyle(
+                                      color: Colors.amber,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            children: [
+                              CircleAvatar(
+                                radius: 40,
+                                backgroundImage: NetworkImage(
+                                    "https://t3.ftcdn.net/jpg/03/05/41/28/240_F_305412877_XAWJjbhjIU36pa3JQAjStTiKsR2uXgwv.jpg"),
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Darrell Steward",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    "General Practitioner",
+                                    style: TextStyle(color: Colors.grey),
+                                  ),
+                                  SizedBox(
+                                    height: 20,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Row(
+                                        children: [
+                                          CircleAvatar(
+                                            backgroundColor: Colors.transparent,
+                                            radius: 10,
+                                            backgroundImage: NetworkImage(
+                                                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShcAdxb-QFP2ojIzkNJ8AGLBaSdMPN12l0LKbtgBIOqOJ4KBb0N1P7fGtQ_j0saBS_DWk&usqp=CAU"),
+                                          ),
+                                          SizedBox(
+                                            width: 5,
+                                          ),
+                                          Text("3 Years")
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        width: 20,
+                                      ),
+                                      Row(
+                                        children: [
+                                          CircleAvatar(
+                                            backgroundColor: Colors.transparent,
+                                            radius: 10,
+                                            backgroundImage: NetworkImage(
+                                                "https://www.rawshorts.com/freeicons/wp-content/uploads/2017/01/brown_webpict35_1484337169-1.png"),
+                                          ),
+                                          SizedBox(
+                                            width: 5,
+                                          ),
+                                          Text("92%")
+                                        ],
+                                      )
+                                    ],
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Total Fee",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.grey),
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Text(
+                                    "\$80",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                ],
+                              ),
+                              SizedBox(
+                                width: 40,
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => AppointmentDate()));
+                                },
+                                child: Container(
+                                  height: 50,
+                                  width: 250,
+                                  decoration: BoxDecoration(
+                                      color: Colors.amber,
+                                      borderRadius: BorderRadius.circular(50)),
+                                  child: Center(
+                                    child: Text(
+                                      "Make an appontment",
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    )
+                  ],
                 ),
               )
             ],
