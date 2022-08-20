@@ -291,15 +291,13 @@ class _HomePageState extends State<HomePage> {
                         padding:
                             EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                         color: Colors.white,
-                        height: 130,
+                        height: 250,
                         child: ListView.separated(
                           shrinkWrap: true,
                           itemCount: newsList.length,
-                          scrollDirection: Axis.horizontal,
+                          scrollDirection: Axis.vertical,
                           itemBuilder: (context, index) {
                             return Container(
-                              width: MediaQuery.of(context).size.width * 0.9,
-                              //color: Colors.black12,
 
                               //UPDATED NEWS TITLE AND IMAGE
                               child: Row(
@@ -376,7 +374,7 @@ class _HomePageState extends State<HomePage> {
                           },
                           separatorBuilder: (context, index) {
                             return SizedBox(
-                              width: 20,
+                              height: 20,
                             );
                           },
                         ),

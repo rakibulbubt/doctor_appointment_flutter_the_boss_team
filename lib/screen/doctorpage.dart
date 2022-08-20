@@ -51,15 +51,20 @@ class DoctorPage extends StatelessWidget {
                                 Text(
                                   "DOCTORS",
                                   style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
+                                    color: Color(0xFFD4F0F1),
+                                    fontWeight: FontWeight.w900,
+                                    fontFamily: 'RobotoSlab',
+                                    letterSpacing: 2,
+                                    fontSize: 18,
+                                  ),
                                 )
                               ],
                             ),
                           ),
                           Icon(
                             Icons.info_outline,
-                            color: Colors.white,
+                            size: 30,
+                            color: Color(0xFFD4F0F1),
                           )
                         ],
                       ),
@@ -71,12 +76,12 @@ class DoctorPage extends StatelessWidget {
                       //Search Bar start
                       Container(
                         alignment: Alignment.center,
-                        padding: EdgeInsets.only(left: 15),
-                        height: 50,
+                        padding: EdgeInsets.only(left: 20),
+                        height: 60,
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.circular(35),
+                          borderRadius: BorderRadius.circular(40),
                         ),
                         child: TextFormField(
                           decoration: InputDecoration(
@@ -130,15 +135,25 @@ class DoctorPage extends StatelessWidget {
                             children: [
                               Text(
                                 "DOCTOR NEARBY",
-                                style: TextStyle(fontWeight: FontWeight.bold),
+                                style: TextStyle(
+                                  color: Color(0xFF4D577C),
+                                  fontWeight: FontWeight.w900,
+                                  fontFamily: 'RobotoSlab',
+                                  letterSpacing: 2,
+                                  fontSize: 16,
+                                ),
                               ),
                               InkWell(
                                 onTap: () {},
                                 child: Text(
                                   "SEE ALL",
                                   style: TextStyle(
-                                      color: Colors.amber,
-                                      fontWeight: FontWeight.bold),
+                                    color: Color(0xFFFD922E),
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'RobotoSlab',
+                                    fontSize: 16,
+                                    letterSpacing: 2
+                                  ),
                                 ),
                               )
                             ],
@@ -161,15 +176,23 @@ class DoctorPage extends StatelessWidget {
                                 children: [
                                   Text(
                                     "Darrell Steward",
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold),
+                                    style: TextStyle(
+                                      color: Color(0xFF4D577C),
+                                      fontWeight: FontWeight.w900,
+                                      fontFamily: 'RobotoSlab',
+                                      fontSize: 18,
+                                    ),
                                   ),
                                   SizedBox(
                                     height: 10,
                                   ),
                                   Text(
                                     "General Practitioner",
-                                    style: TextStyle(color: Colors.grey),
+                                    style: TextStyle(
+                                      color: Color(0xFFA1ACD2),
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'RobotoSlab',
+                                    ),
                                   ),
                                   SizedBox(
                                     height: 20,
@@ -196,7 +219,14 @@ class DoctorPage extends StatelessWidget {
                                           SizedBox(
                                             width: 5,
                                           ),
-                                          Text("3 Years")
+                                          Text(
+                                            "3 Years",
+                                            style: TextStyle(
+                                              color: Color(0xFFA1ACD2),
+                                              fontWeight: FontWeight.bold,
+                                              fontFamily: 'RobotoSlab',
+                                            ),
+                                          )
                                         ],
                                       ),
                                       SizedBox(
@@ -221,7 +251,14 @@ class DoctorPage extends StatelessWidget {
                                           SizedBox(
                                             width: 5,
                                           ),
-                                          Text("92%")
+                                          Text(
+                                            "92%",
+                                            style: TextStyle(
+                                              color: Color(0xFFA1ACD2),
+                                              fontWeight: FontWeight.bold,
+                                              fontFamily: 'RobotoSlab',
+                                            ),
+                                          )
                                         ],
                                       )
                                     ],
@@ -241,8 +278,10 @@ class DoctorPage extends StatelessWidget {
                                   Text(
                                     "Total Fee",
                                     style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.grey),
+                                      color: Color(0xFFA1ACD2),
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'RobotoSlab',
+                                    ),
                                   ),
                                   SizedBox(
                                     height: 5,
@@ -250,7 +289,10 @@ class DoctorPage extends StatelessWidget {
                                   Text(
                                     "\$80",
                                     style: TextStyle(
-                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xFF4D577C),
+                                      fontWeight: FontWeight.w900,
+                                      fontFamily: 'RobotoSlab',
+                                      fontSize: 26,
                                     ),
                                   )
                                 ],
@@ -264,18 +306,21 @@ class DoctorPage extends StatelessWidget {
                                       builder: (context) => AppointmentDate()));
                                 },
                                 child: Container(
-                                  height: 50,
-                                  width: 250,
+                                  height: 60,
+                                  width: 300,
                                   decoration: BoxDecoration(
-                                      color: Colors.amber,
+                                      color: Color(0xFFFE8312),
                                       borderRadius: BorderRadius.circular(50)),
                                   child: Center(
                                     child: Text(
                                       "Make an appontment",
                                       style: TextStyle(
-                                          fontSize: 16,
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold),
+                                        fontSize: 16,
+                                        color: Color(0xffffe8c3),
+                                        fontWeight: FontWeight.bold,
+                                        wordSpacing: 2,
+                                        fontFamily: 'RobotoSlab',
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -289,7 +334,7 @@ class DoctorPage extends StatelessWidget {
                       height: 10,
                     ),
                     Container(
-                      height: 400,
+                      height: MediaQuery.of(context).size.height,
                       child: ListView.builder(
                         clipBehavior: Clip.hardEdge,
                         itemCount: docList.length,
@@ -312,7 +357,12 @@ class DoctorPage extends StatelessWidget {
                                           ? Text(
                                               "RECOMENDED DOCTORS",
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.bold),
+                                                color: Color(0xFF4D577C),
+                                                fontWeight: FontWeight.w900,
+                                                fontFamily: 'RobotoSlab',
+                                                letterSpacing: 2,
+                                                fontSize: 16,
+                                              ),
                                             )
                                           : SizedBox(
                                               height: 0,
@@ -323,9 +373,12 @@ class DoctorPage extends StatelessWidget {
                                               ? Text(
                                                   "SEE ALL",
                                                   style: TextStyle(
-                                                      color: Colors.amber,
-                                                      fontWeight:
-                                                          FontWeight.bold),
+                                                      color: Color(0xFFFD922E),
+                                                      fontWeight: FontWeight.bold,
+                                                      fontFamily: 'RobotoSlab',
+                                                      fontSize: 16,
+                                                      letterSpacing: 2
+                                                  ),
                                                 )
                                               : SizedBox(
                                                   height: 0,
@@ -352,15 +405,22 @@ class DoctorPage extends StatelessWidget {
                                           Text(
                                             "${docList[index].name}",
                                             style: TextStyle(
-                                                fontWeight: FontWeight.bold),
+                                              color: Color(0xFF4D577C),
+                                              fontWeight: FontWeight.w900,
+                                              fontFamily: 'RobotoSlab',
+                                              fontSize: 18,
+                                            ),
                                           ),
                                           SizedBox(
                                             height: 10,
                                           ),
                                           Text(
                                             "General Practitioner",
-                                            style:
-                                                TextStyle(color: Colors.grey),
+                                            style: TextStyle(
+                                              color: Color(0xFFA1ACD2),
+                                              fontWeight: FontWeight.bold,
+                                              fontFamily: 'RobotoSlab',
+                                            ),
                                           ),
                                           SizedBox(
                                             height: 20,
@@ -389,7 +449,15 @@ class DoctorPage extends StatelessWidget {
                                                   SizedBox(
                                                     width: 5,
                                                   ),
-                                                  Text("3 Years")
+                                                  Text(
+                                                    "3 Years",
+                                                    style: TextStyle(
+                                                      color: Color(0xFFA1ACD2),
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      fontFamily: 'RobotoSlab',
+                                                    ),
+                                                  )
                                                 ],
                                               ),
                                               SizedBox(
@@ -417,7 +485,15 @@ class DoctorPage extends StatelessWidget {
                                                   SizedBox(
                                                     width: 5,
                                                   ),
-                                                  Text("92%")
+                                                  Text(
+                                                    "92%",
+                                                    style: TextStyle(
+                                                      color: Color(0xFFA1ACD2),
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      fontFamily: 'RobotoSlab',
+                                                    ),
+                                                  )
                                                 ],
                                               )
                                             ],
@@ -438,8 +514,10 @@ class DoctorPage extends StatelessWidget {
                                           Text(
                                             "Total Fee",
                                             style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                                color: Colors.grey),
+                                              color: Color(0xFFA1ACD2),
+                                              fontWeight: FontWeight.bold,
+                                              fontFamily: 'RobotoSlab',
+                                            ),
                                           ),
                                           SizedBox(
                                             height: 5,
@@ -447,7 +525,10 @@ class DoctorPage extends StatelessWidget {
                                           Text(
                                             "\$80",
                                             style: TextStyle(
-                                              fontWeight: FontWeight.bold,
+                                              color: Color(0xFF4D577C),
+                                              fontWeight: FontWeight.w900,
+                                              fontFamily: 'RobotoSlab',
+                                              fontSize: 26,
                                             ),
                                           )
                                         ],
@@ -463,19 +544,22 @@ class DoctorPage extends StatelessWidget {
                                                       AppointmentDate()));
                                         },
                                         child: Container(
-                                          height: 50,
-                                          width: 250,
+                                          height: 60,
+                                          width: 300,
                                           decoration: BoxDecoration(
-                                              color: Colors.amber,
+                                              color: Color(0xFFFE8312),
                                               borderRadius:
                                                   BorderRadius.circular(50)),
                                           child: Center(
                                             child: Text(
                                               "Make an appontment",
                                               style: TextStyle(
-                                                  fontSize: 16,
-                                                  color: Colors.white,
-                                                  fontWeight: FontWeight.bold),
+                                                fontSize: 16,
+                                                color: Color(0xffffe8c3),
+                                                fontWeight: FontWeight.bold,
+                                                wordSpacing: 2,
+                                                fontFamily: 'RobotoSlab',
+                                              ),
                                             ),
                                           ),
                                         ),
@@ -487,7 +571,8 @@ class DoctorPage extends StatelessWidget {
                                   ),
                                   Container(
                                     height: 2,
-                                    width: 300,
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.9,
                                     decoration: BoxDecoration(
                                         borderRadius:
                                             BorderRadius.circular(300),
