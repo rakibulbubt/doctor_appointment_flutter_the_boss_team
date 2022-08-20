@@ -1,6 +1,5 @@
 import 'package:doctor_appointment/custom_nav_bar/custom_navbar.dart';
 import 'package:doctor_appointment/screen/apointdate.dart';
-import 'package:doctor_appointment/screen/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:doctor_appointment/madel_calss/doc_list_model.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
