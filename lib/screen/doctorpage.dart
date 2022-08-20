@@ -15,6 +15,7 @@ class DoctorPage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
+          physics: ScrollPhysics(),
           child: Container(
             color: Colors.grey.withOpacity(0.2),
             child: Column(
@@ -307,20 +308,28 @@ class DoctorPage extends StatelessWidget {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Text(
-                                        "RECOMENDED DOCTORS",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
-                                      ),
+                                      (index == 0)
+                                          ? Text(
+                                              "RECOMENDED DOCTORS",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold),
+                                            )
+                                          : SizedBox(
+                                              height: 0,
+                                            ),
                                       InkWell(
-                                        onTap: () {},
-                                        child: Text(
-                                          "SEE ALL",
-                                          style: TextStyle(
-                                              color: Colors.amber,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      )
+                                          onTap: () {},
+                                          child: (index == 0)
+                                              ? Text(
+                                                  "SEE ALL",
+                                                  style: TextStyle(
+                                                      color: Colors.amber,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                )
+                                              : SizedBox(
+                                                  height: 0,
+                                                ))
                                     ],
                                   ),
                                   SizedBox(
@@ -477,7 +486,7 @@ class DoctorPage extends StatelessWidget {
                                     height: 20,
                                   ),
                                   Container(
-                                    height: 3,
+                                    height: 2,
                                     width: 300,
                                     decoration: BoxDecoration(
                                         borderRadius:
