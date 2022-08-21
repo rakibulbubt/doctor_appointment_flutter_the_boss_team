@@ -1,6 +1,6 @@
 import 'package:custom_line_indicator_bottom_navbar/custom_line_indicator_bottom_navbar.dart';
 import 'package:doctor_appointment/screen/apointdate.dart';
-import 'package:doctor_appointment/screen/doctorpage.dart';
+import 'package:doctor_appointment/screen/doctors_page.dart';
 import 'package:doctor_appointment/screen/homepage.dart';
 import 'package:doctor_appointment/screen/setting_page.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +18,7 @@ class _CustomNavbarState extends State<CustomNavbar> {
 
   List paggeList=[
     HomePage(),
-    DoctorPage(),
+    DoctorsPage(),
     AppointmentDate(),
     SettingPage(),
   ];
