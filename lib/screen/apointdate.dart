@@ -1,5 +1,8 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class AppointmentDate extends StatefulWidget {
   const AppointmentDate({Key? key}) : super(key: key);
@@ -91,11 +94,16 @@ class _AppointmentDateState extends State<AppointmentDate> {
                       ),
                       Row(
                         children: [
-                          CircleAvatar(
-                            radius: 10,
-                            backgroundImage: NetworkImage(
-                                "https://flyclipart.com/thumb2/work-experience-experience-layout-icon-with-png-and-vector-741286.png"),
-                          ),
+                          // CircleAvatar(
+                          //   radius: 10,
+                          //   backgroundImage: NetworkImage(
+                          //       "https://flyclipart.com/thumb2/work-experience-experience-layout-icon-with-png-and-vector-741286.png"),
+                          // ),
+                        Icon(
+                        Icons.medical_services_outlined,
+                        size: 20,
+                        color: Colors.blue,
+                      ),
                           SizedBox(width: 4),
                           Text(
                             " 3 years",
@@ -104,11 +112,28 @@ class _AppointmentDateState extends State<AppointmentDate> {
                           SizedBox(
                             width: 8,
                           ),
-                          CircleAvatar(
-                            radius: 10,
-                            backgroundImage: NetworkImage(
-                                "https://png.pngtree.com/png-clipart/20190902/original/pngtree-cartoon-pink-love-material-png-image_4383180.jpg"),
-                          ),
+                          // CircleAvatar(
+                          //   radius: 10,
+                          //   backgroundImage: NetworkImage(
+                          //       "https://png.pngtree.com/png-clipart/20190902/original/pngtree-cartoon-pink-love-material-png-image_4383180.jpg"),
+                          // ),
+                          Container(
+                              padding: EdgeInsets.all(2),
+                              height: 30,
+                              width: 30,
+                              decoration: BoxDecoration(
+                                  borderRadius:
+                                  BorderRadius.circular(15),
+                                  color: Colors.red
+                                      .withOpacity(0.2)),
+                              child: Icon(
+                                EvaIcons.heart,
+                                size: 20,
+                                color: Colors.red,
+                              )),
+
+
+
                           SizedBox(
                             width: 4,
                           ),
@@ -181,7 +206,7 @@ class _AppointmentDateState extends State<AppointmentDate> {
                             ],
                           ),
                         ),
-                        height: 50,
+                        height: 45,
                         // width: 300,
                         decoration: BoxDecoration(
                           color: Color(0xFFecf3fc),
@@ -197,7 +222,7 @@ class _AppointmentDateState extends State<AppointmentDate> {
 
 
             Padding(
-              padding:  EdgeInsets.symmetric(vertical: 5, horizontal: 0),
+              padding:  EdgeInsets.symmetric(vertical: 2, horizontal: 5),
               child: Container(
                 color: Colors.white,
                 padding:  EdgeInsets.symmetric(vertical: 20),
@@ -277,43 +302,57 @@ class _AppointmentDateState extends State<AppointmentDate> {
             ),
 
 
-            SizedBox(height: 10,),
-            Padding(
-                padding:  EdgeInsets.symmetric(horizontal: 20.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Color(0xFFfd8311),
+            SizedBox(height: 5,),
+            Container(
+              height: 80,
+              color: Colors.white,
+              child: Padding(
+                padding:  EdgeInsets.symmetric(horizontal: 25.0, vertical: 9 ),
+                child: Column(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: HexColor("#fd8311"),
 
-                    borderRadius: BorderRadius.circular(50),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.6),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset: Offset(0, 4), // changes position of shadow
+                        borderRadius: BorderRadius.circular(50),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.6),
+                            spreadRadius: 5,
+                            blurRadius: 7,
+                            offset: Offset(0, 4), // changes position of shadow
+                          ),
+                        ],),
+
+                      padding: EdgeInsets.symmetric(vertical: 6),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                              "Pay & Confirm",
+                              style: GoogleFonts.prompt(
+                                  color: HexColor("#fce1c9"),
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500
+                              )),
+
+                        ],
                       ),
-                    ],),
 
-                  padding: EdgeInsets.symmetric(vertical: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                          "Pay & Confirm",
-                          style: TextStyle(
-                              color: Color(0xFFfce1c9),
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500
-                          )),
-                    ],),
-                )),
-            SizedBox(height: 2,),
-            Divider(
-                indent: 150,
-                endIndent: 150,
-                height: 20,
-                thickness: 5,
-                color: Colors.black26),
+
+                    ),
+                    Divider(
+                      height: 20,
+                      thickness: 5,
+                      indent: 120,
+                      endIndent: 120,
+                      color: Colors.black26,
+                    )
+                  ],
+                ),
+              ),
+
+            ),
           ]),
         ),
       ),
